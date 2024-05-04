@@ -1,0 +1,24 @@
+name = "culefilo"
+compatibility_date = "2024-04-05"
+
+# Variable bindings. These are arbitrary, plaintext strings (similar to environment variables)
+# Note: Use secrets to store sensitive data.
+# Docs: https://developers.cloudflare.com/pages/functions/bindings/#environment-variables
+[vars]
+ENVIRONMENT = "dev"
+PLACES_API_URL = "https://places.googleapis.com/v1/places:searchText"
+OPENDATASOFT_API_URL = "https://data.opendatasoft.com/api/explore/v2.1/catalog/datasets/geonames-postal-code@public/records"
+
+[env.production]
+vars = { ENVIRONMENT = "production" }
+
+# Bind a KV Namespace. Use KV as persistent storage for small key-value pairs.
+# Docs: https://developers.cloudflare.com/pages/functions/bindings/#kv-namespaces
+[[kv_namespaces]]
+binding = "CULEFILO_KV"
+id = "b76a7dbd7be8541c0c6c1db621c82395"
+
+# Bind the Workers AI model catalog. Run machine learning models, powered by serverless GPUs, on Cloudflare’s global network
+# Docs: https://developers.cloudflare.com/pages/functions/bindings/#workers-ai
+[ai]
+binding = "AI"
