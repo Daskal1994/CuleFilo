@@ -1,6 +1,6 @@
 # Cule Filo - AI-powered restaurant search engine
 
-> Discover the top 3 restaurants serving your favorite food near you. Just enter your craving and location in our free AI-powered app, and start your culinary adventure today!.
+> Discover the top 3 restaurants serving your favorite food near you. Just enter your craving and location in our free AI-powered app, and start your culinary adventure today!
 
 **Demo:** https://cule-filo.pages.dev
 
